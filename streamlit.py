@@ -148,12 +148,3 @@ else:
 # else:
 #     st.warning(f"⚠️ BEARISH: Predicted ${prediction:.2f}")
 
-!pip install streamlit pyngrok -q
-
-!streamlit run app.py &>/dev/null&
-
-from pyngrok import ngrok
-ngrok.set_auth_token("381Chgu5Zxk3Jy2hLKaTfphBdpa_21c1fTKiwz2HhJ5T67mr")
-
-public_url = ngrok.connect(addr='8501')
-print('Your Streamlit app is available at:', public_url)
